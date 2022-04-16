@@ -1,0 +1,62 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "anyenv"
+brew "awscli"
+brew "bat"
+brew "chezmoi"
+brew "diff-so-fancy"
+brew "duf"
+brew "exa"
+brew "fd"
+brew "fzy"
+brew "gh"
+brew "git"
+brew "go"
+brew "golangci-lint"
+brew "luajit", args: ["HEAD"]
+brew "mas"
+brew "neovim"
+brew "pulumi"
+brew "ripgrep"
+brew "rust"
+brew "spotify-tui"
+brew "spotifyd", restart_service: true
+brew "starship"
+brew "stylua"
+brew "tldr"
+brew "wget"
+brew "z"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-vi-mode"
+cask "1password-beta"
+cask "1password-cli-beta"
+cask "alfred"
+cask "amethyst"
+cask "brave-browser-dev"
+cask "dash"
+cask "docker"
+cask "fig"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono-nerd-font"
+cask "font-hasklug-nerd-font"
+cask "google-chrome"
+cask "kindle"
+cask "kitty"
+cask "numi"
+cask "rectangle-pro"
+cask "slack"
+cask "unity-hub"
+mas "Be Focused", id: 973134470
+mas "Craft", id: 1487937127
+EOF
+{{ end -}}
+
