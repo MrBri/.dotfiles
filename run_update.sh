@@ -1,5 +1,6 @@
 #!/bin/bash
 
-pnpm add -g pnpm neovim # nvim :checkhealth doesn't seem to reconize pnpm
+# nvim :checkhealth doesn't seem to reconize pnpm
+pnpm add -g pnpm neovim
 
 pip install -U localstack pynvim pip
